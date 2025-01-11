@@ -1,0 +1,11 @@
+# import module
+from sklearn.preprocessing import MinMaxScaler
+
+# create data
+data = [[-1, 2], [-0.5, 6], [0, 10], [1, 18]]
+
+# scale features
+scaler = MinMaxScaler()
+model=scaler.fit(data)#is used to compute the mean and std dev
+scaled_data=model.transform(data)#is used to perform scaling using mean and std dev
+print(scaled_data)
